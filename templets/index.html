@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Sentinel Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🛡️ Cyber Sentinel Model</h1>
+            <p>Advanced Threat Detection and Analysis</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="card model-info">
+                <h2>Model Information</h2>
+                <div id="modelInfo">
+                    <div class="loading">Loading model information...</div>
+                </div>
+            </div>
+
+            <div class="card system-status">
+                <h2>System Status</h2>
+                <div id="systemStatus">
+                    <div class="info-item">
+                        <strong>API:</strong> <span id="apiStatus" class="status-ok">Operational</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Model:</strong> <span id="modelStatus" class="status-ok">Loaded</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card input-section">
+                <h2>Single Prediction</h2>
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="inputData">Input Data (JSON array or space-separated numbers):</label>
+                        <textarea id="inputData" rows="4" placeholder="Enter input data..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Make Prediction</button>
+                    <button type="button" id="loadExample" class="btn">Load Example</button>
+                </form>
+
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Processing prediction...</p>
+                </div>
+
+                <div id="predictionResults"></div>
+            </div>
+
+            <div class="card input-section">
+                <h2>Batch Prediction</h2>
+                <form id="batchPredictionForm">
+                    <div class="form-group">
+                        <label for="batchInputData">Batch Input Data (JSON array of arrays):</label>
+                        <textarea id="batchInputData" rows="6" placeholder='Enter batch data as JSON: [[0.1, 0.2, ...], [0.3, 0.4, ...]]'></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Make Batch Prediction</button>
+                </form>
+
+                <div id="batchLoading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Processing batch prediction...</p>
+                </div>
+
+                <div id="batchPredictionResults"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>API Documentation</h2>
+            <div class="api-endpoints">
+                <h3>Available Endpoints:</h3>
+                <ul>
+                    <li><strong>GET /api/health</strong> - Health check</li>
+                    <li><strong>GET /api/model/info</strong> - Model information</li>
+                    <li><strong>POST /api/predict</strong> - Single prediction</li>
+                    <li><strong>POST /api/predict/batch</strong> - Batch prediction</li>
+                    <li><strong>GET /api/example</strong> - Example input format</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Cyber Sentinel Model Configuration
+
+app:
+  name: "Cyber Sentinel Model"
+  version: "1.0.0"
+  debug: false
+
+model:
+  path: "models/cyber_sentinel_model.pkl"
+  input_size: 100  # Adjust based on your model
+  device: "auto"   # auto, cpu, or cuda
+
+server:
+  host: "0.0.0.0"
+  port: 5000
+  workers: 4
+
+logging:
+  level: "INFO"
+  file: "cyber_sentinel.log"
+
+api:
+  rate_limit: "100 per hour"
+  cors_origins: "*"
+
+preprocessing:
+  normalize: true
+  feature_scaling: true

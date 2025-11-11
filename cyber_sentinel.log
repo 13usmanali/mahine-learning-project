@@ -1,0 +1,22 @@
+2025-11-11 09:51:20,452 - __main__ - ERROR - Failed to start application: No module named 'app.services.prediction_service'
+2025-11-11 09:51:30,303 - main - ERROR - Failed to start application: No module named 'app.services.prediction_service'
+2025-11-11 09:53:02,916 - main - ERROR - Failed to start application: No module named 'app.services.prediction_service'
+2025-11-11 09:53:09,886 - __main__ - ERROR - Failed to start application: No module named 'app.services.prediction_service'
+2025-11-11 09:53:30,250 - __main__ - ERROR - Failed to start application: No module named 'app.services.prediction_service'
+2025-11-11 09:54:42,664 - __main__ - ERROR - Failed to start application: No module named 'app.models'
+2025-11-11 09:55:18,390 - __main__ - ERROR - Failed to start application: No module named 'app.models.cyber_sentinel'
+2025-11-11 09:55:44,525 - __main__ - ERROR - Failed to start application: No module named 'app.utils.data_preprocessor'
+2025-11-11 09:56:17,994 - __main__ - ERROR - Failed to start application: No module named 'torch'
+2025-11-11 09:56:18,671 - __main__ - ERROR - Failed to start application: No module named 'torch'
+2025-11-11 09:56:36,213 - app.models.cyber_sentinel - ERROR - Failed to load model: Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2025-11-11 09:56:36,213 - __main__ - ERROR - Failed to start application: Weights only load failed. In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: 
+
+Unsupported operand 149
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
